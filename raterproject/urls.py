@@ -1,9 +1,12 @@
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-from raterapi.views import UserViewSet
+from raterapi.views import UserViewSet, CategoryViewSet, GameViewSet, ReviewViewSet
 
 router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'categories', CategoryViewSet, 'category')
+router.register(r'games', GameViewSet, 'game')
+router.register(r'reviews', ReviewViewSet, 'review')
 
 urlpatterns = [
     path('', include(router.urls)),

@@ -44,3 +44,4 @@ class UserViewSet(viewsets.ViewSet):
             return Response({'valid': True, 'token': token.key}, status=status.HTTP_200_OK)
         else:
             return Response({'error': 'Invalid Credentials'}, status=status.HTTP_400_BAD_REQUEST)
+        

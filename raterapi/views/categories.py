@@ -23,3 +23,4 @@ class CategoryViewSet(viewsets.ViewSet):
             return Response(serializer.data)
         except Category.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
+        

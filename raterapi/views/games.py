@@ -1,19 +1,21 @@
 from rest_framework import viewsets, status
 from rest_framework.response import Response
 from rest_framework import serializers
-from raterapi.models import Game
+from raterapi.models import Game, Category
 from .categories import CategorySerializer
 
 class GameSerializer(serializers.ModelSerializer):
     is_owner = serializers.SerializerMethodField()
-    categories = CategorySerializer(many=True)
+    categories = serializers.PrimaryKeyRelatedField(many=True, queryset=Category.objects.all(), write_only=True)
+
+    category_details = CategorySerializer(many=True, read_only=True, source='categories')
 
     def get_is_owner(self, obj):
         return self.context['request'].user == obj.user
     
     class Meta:
         model = Game
-        fields = ['id', 'title', 'description', 'designer', 'year_released', 'num_players', 'estimated_playtime', 'age_recommendation', 'is_owner', 'categories']
+        fields = ['id', 'title', 'description', 'designer', 'year_released', 'num_players', 'estimated_playtime', 'age_recommendation', 'is_owner', 'categories', 'category_details']
 
 class GameViewSet(viewsets.ViewSet):
 
@@ -63,7 +65,7 @@ class GameViewSet(viewsets.ViewSet):
 
             self.check_object_permissions(request, game)
 
-            serializer = GameSerializer(data=request.data)
+            serializer = GameSerializer(game, data=request.data, partial=True, context={'request': request})
 
             if serializer.is_valid():
                 game.title = serializer.validated_data['title']
@@ -90,6 +92,10 @@ class GameViewSet(viewsets.ViewSet):
         try:
             game = Game.objects.get(pk=pk)
             self.check_object_permissions(request, game)
+
+            if game.user.id != request.user.id:
+                return Response(status=status.HTTP_403_FORBIDDEN)
+            
             game.delete()
 
             return Response(status=status.HTTP_204_NO_CONTENT)
