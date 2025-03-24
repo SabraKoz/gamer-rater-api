@@ -1,0 +1,229 @@
+[
+    {
+      "model": "raterapi.game",
+      "pk": 1,
+      "fields": {
+        "user": 1,
+        "title": "Catan",
+        "description": "A resource management game with trading and building mechanics.",
+        "designer": "Klaus Teuber",
+        "year_released": 1995,
+        "num_players": 3,
+        "estimated_playtime": 90,
+        "age_recommendation": 10,
+        "categories": [1, 8]
+      }
+    },
+    {
+      "model": "raterapi.game",
+      "pk": 2,
+      "fields": {
+        "user": 2,
+        "title": "Carcassonne",
+        "description": "A tile-placement game set in medieval times.",
+        "designer": "Klaus-Jürgen Wrede",
+        "year_released": 2000,
+        "num_players": 2,
+        "estimated_playtime": 35,
+        "age_recommendation": 8,
+        "categories": [1, 4]
+      }
+    },
+    {
+      "model": "raterapi.game",
+      "pk": 3,
+      "fields": {
+        "user": 3,
+        "title": "Dominion",
+        "description": "The original deck-building card game.",
+        "designer": "Donald X. Vaccarino",
+        "year_released": 2008,
+        "num_players": 4,
+        "estimated_playtime": 30,
+        "age_recommendation": 13,
+        "categories": [3, 5]
+      }
+    },
+    {
+      "model": "raterapi.game",
+      "pk": 4,
+      "fields": {
+        "user": 4,
+        "title": "Pandemic",
+        "description": "A cooperative game where players work together to cure diseases.",
+        "designer": "Matt Leacock",
+        "year_released": 2008,
+        "num_players": 4,
+        "estimated_playtime": 45,
+        "age_recommendation": 8,
+        "categories": [9, 1]
+      }
+    },
+    {
+      "model": "raterapi.game",
+      "pk": 5,
+      "fields": {
+        "user": 5,
+        "title": "Ticket to Ride",
+        "description": "A railway-themed board game with strategic route planning.",
+        "designer": "Alan R. Moon",
+        "year_released": 2004,
+        "num_players": 5,
+        "estimated_playtime": 60,
+        "age_recommendation": 8,
+        "categories": [8, 1]
+      }
+    },
+    {
+      "model": "raterapi.game",
+      "pk": 6,
+      "fields": {
+        "user": 1,
+        "title": "7 Wonders",
+        "description": "A card-drafting civilization-building game.",
+        "designer": "Antoine Bauza",
+        "year_released": 2010,
+        "num_players": 7,
+        "estimated_playtime": 30,
+        "age_recommendation": 10,
+        "categories": [1, 3]
+      }
+    },
+    {
+      "model": "raterapi.game",
+      "pk": 7,
+      "fields": {
+        "user": 2,
+        "title": "Scythe",
+        "description": "A strategy game set in an alternate-history 1920s.",
+        "designer": "Jamey Stegmaier",
+        "year_released": 2016,
+        "num_players": 5,
+        "estimated_playtime": 115,
+        "age_recommendation": 14,
+        "categories": [1, 4]
+      }
+    },
+    {
+      "model": "raterapi.game",
+      "pk": 8,
+      "fields": {
+        "user": 3,
+        "title": "Terraforming Mars",
+        "description": "A game focused on transforming Mars into a habitable planet.",
+        "designer": "Jacob Fryxelius",
+        "year_released": 2016,
+        "num_players": 5,
+        "estimated_playtime": 120,
+        "age_recommendation": 12,
+        "categories": [1, 8]
+      }
+    },
+    {
+      "model": "raterapi.game",
+      "pk": 9,
+      "fields": {
+        "user": 4,
+        "title": "Wingspan",
+        "description": "A beautiful game about bird collecting and engine building.",
+        "designer": "Elizabeth Hargrave",
+        "year_released": 2019,
+        "num_players": 5,
+        "estimated_playtime": 40,
+        "age_recommendation": 10,
+        "categories": [1, 9]
+      }
+    },
+    {
+      "model": "raterapi.game",
+      "pk": 10,
+      "fields": {
+        "user": 5,
+        "title": "Azul",
+        "description": "A tile-drafting game inspired by Moorish art.",
+        "designer": "Michael Kiesling",
+        "year_released": 2017,
+        "num_players": 4,
+        "estimated_playtime": 45,
+        "age_recommendation": 8,
+        "categories": [4, 8]
+      }
+    },
+    {
+      "model": "raterapi.game",
+      "pk": 11,
+      "fields": {
+        "user": 1,
+        "title": "Gloomhaven",
+        "description": "A tactical RPG and dungeon-crawling board game.",
+        "designer": "Isaac Childres",
+        "year_released": 2017,
+        "num_players": 4,
+        "estimated_playtime": 120,
+        "age_recommendation": 14,
+        "categories": [6, 10]
+      }
+    },
+    {
+      "model": "raterapi.game",
+      "pk": 12,
+      "fields": {
+        "user": 2,
+        "title": "Spirit Island",
+        "description": "A cooperative strategy game where players protect their island.",
+        "designer": "R. Eric Reuss",
+        "year_released": 2017,
+        "num_players": 4,
+        "estimated_playtime": 90,
+        "age_recommendation": 13,
+        "categories": [9, 1]
+      }
+    },
+    {
+      "model": "raterapi.game",
+      "pk": 13,
+      "fields": {
+        "user": 3,
+        "title": "Codenames",
+        "description": "A word-based party game with a spy theme.",
+        "designer": "Vlaada Chvátil",
+        "year_released": 2015,
+        "num_players": 8,
+        "estimated_playtime": 15,
+        "age_recommendation": 10,
+        "categories": [9, 3]
+      }
+    },
+    {
+      "model": "raterapi.game",
+      "pk": 14,
+      "fields": {
+        "user": 4,
+        "title": "Patchwork",
+        "description": "A two-player tile-laying game with a quilting theme.",
+        "designer": "Uwe Rosenberg",
+        "year_released": 2014,
+        "num_players": 2,
+        "estimated_playtime": 30,
+        "age_recommendation": 8,
+        "categories": [4, 8]
+      }
+    },
+    {
+      "model": "raterapi.game",
+      "pk": 15,
+      "fields": {
+        "user": 5,
+        "title": "The Crew",
+        "description": "A cooperative trick-taking card game.",
+        "designer": "Thomas Sing",
+        "year_released": 2019,
+        "num_players": 5,
+        "estimated_playtime": 20,
+        "age_recommendation": 10,
+        "categories": [2, 9]
+      }
+    }
+  ]
+  
+  

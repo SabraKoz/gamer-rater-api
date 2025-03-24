@@ -9,5 +9,6 @@ urlpatterns = [
     path('', include(router.urls)),
     path('register', UserViewSet.as_view({'post': 'register_account'}), name='register'),
     path('login', UserViewSet.as_view({'post': 'user_login'}), name='login'),
+    path('admin/', admin.site.urls),
 ]
 
