@@ -63,24 +63,17 @@ class GameViewSet(viewsets.ViewSet):
         try:
             game = Game.objects.get(pk=pk)
 
-            self.check_object_permissions(request, game)
+            if game.user.id != request.user.id:
+                return Response(status=status.HTTP_403_FORBIDDEN)
 
             serializer = GameSerializer(game, data=request.data, partial=True, context={'request': request})
 
             if serializer.is_valid():
-                game.title = serializer.validated_data['title']
-                game.description = serializer.validated_data['description']
-                game.designer = serializer.validated_data['designer']
-                game.year_released = serializer.validated_data['year_released']
-                game.num_players = serializer.validated_data['num_players']
-                game.estimated_playtime = serializer.validated_data['estimated_playtime']
-                game.age_recommendation = serializer.validated_data['age_recommendation']
-                game.save()
+                serializer.save()
 
                 category_ids = request.data.get('categories', [])
                 game.categories.set(category_ids)
 
-                serializer = GameSerializer(game, context={'request': request})
                 return Response(None, status.HTTP_204_NO_CONTENT)
             
             return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
