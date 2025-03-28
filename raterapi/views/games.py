@@ -15,7 +15,19 @@ class GameSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Game
-        fields = ['id', 'title', 'description', 'designer', 'year_released', 'num_players', 'estimated_playtime', 'age_recommendation', 'is_owner', 'categories', 'category_details']
+        fields = [
+            'id', 
+            'title', 
+            'description', 
+            'designer', 
+            'year_released', 
+            'num_players', 
+            'estimated_playtime', 
+            'age_recommendation', 
+            'is_owner', 
+            'categories', 
+            'category_details'
+            ]
 
 class GameViewSet(viewsets.ViewSet):
 
